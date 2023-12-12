@@ -7,7 +7,7 @@ sed -i "s#UUID#$UUID#g;s#VMESS_WSPATH#$VMESS_WSPATH#g;s#VLESS_WSPATH#$VLESS_WSPA
 sed -i "s#VMESS_WSPATH#$VMESS_WSPATH#g;s#VLESS_WSPATH#$VLESS_WSPATH#g" /etc/nginx/nginx.conf
 # exec "$@"
 
-# 请删掉下一行最前面的 # 号，同时将这行代码中的域名替换成 Replit 为你项目分配的域名。
+# Please delete the # sign at the beginning of the next line and replace the domain name in this line of code with the domain name assigned to your project by Replit.
 #while true ;do curl https://xx.xx.repl.co; sleep 300; done &
 
 /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf

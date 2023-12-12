@@ -1,42 +1,48 @@
 # V2ray for Doprax
+
 Create By ifeng<br>
 Web Site: https://www.hicairo.com <br>
 Telegram: https://t.me/HiaiFeng <br>
 
-# 简介：
-本项目用于在 Doprax.com 免费服务上部署 V2ray ，采用的方案为 Nginx + WebSocket + VMess/VLess + TLS。速度与 Replit 相比较慢，但是官方宣传不限流量，服务启动后永不停机。
+# Introduction:
 
-# 注意事项：
-<p><b><li>请勿滥用，账号封禁风险自负。</li></b></p>
-<p><b><li>部署完成如发现不能上网，请检查域名是否被墙，可使用 Cloudflare CDN 解决。</li></b></p>
+This project is used to deploy V2ray on Doprax.com free service. The solution adopted is Nginx + WebSocket + VMess/VLess + TLS. The speed is slower than Replit, but the official promotion is that there is no traffic limit and the service will never stop after it is started.
 
-# 部署：
-<p>1、登录自己的 GitHub 账号后 Fork 该项目。</p>
-<p>2、注册 <a href="https://www.doprax.com/signup/">Doprax.com</a> 账号登录后 Import 该项目。</p>
-<p>详细使用方案请参考：https://www.hicairo.com/post/55.html</p>
+# Precautions:
 
-# 使用方法：
-<p>1、服务器端配置</p>
-<p>请使用 <a href="https://www.v2fly.org/awesome/tools.html">第三方工具</a> 生成一个新的 UUID 。在 Doprax.com 登录后依次点击左侧菜单中的 Main ,窗口右侧的 Edit source code ，选择 Dockerfile 文件，编辑 UUID 及伪装地址信息保存后重启服务。</p>
+<p><b><li>Please do not abuse, account ban will be at your own risk. </li></b></p>
+<p><b><li>If you find that you cannot access the Internet after the deployment is completed, please check whether the domain name is blocked. You can use Cloudflare CDN to solve the problem. </li></b></p>
+
+# Deployment:
+
+<p>1. Log in to your GitHub account and Fork the project. </p>
+<p>2. Register <a href="https://www.doprax.com/signup/">Doprax.com</a> and log in with your account to import the project. </p>
+<p>For detailed usage plan, please refer to: https://www.hicairo.com/post/55.html</p>
+
+# Instructions:
+
+<p>1. Server-side configuration</p>
+<p>Please use <a href="https://www.v2fly.org/awesome/tools.html">third-party tools</a> to generate a new UUID. After logging in to Doprax.com, click Main in the left menu, Edit source code on the right side of the window, select the Dockerfile file, edit the UUID and camouflage address information, save it and restart the service. </p>
 <img src="https://hicairo.com/zb_users/upload/2022/12/202212291672276227538571.webp">
-<pre class="notranslate"><code># 用新生成的 UUID 替换 de04add9-5c68-8bab-950c-08cd5320df18
+<pre class="notranslate"><code># Replace de04add9-5c68-8bab-950c-08cd5320df18 with the newly generated UUID
 ENV UUID de04add9-5c68-8bab-950c-08cd5320df18
-# VMESS_WSPATH / VLESS_WSPATH 两个常量分别定义了 Vmess/VLess 的伪装路径，
-# 请分别修改内容中的vmess或vless。注意：伪装路径以 / 符号开始,为避免不必要的麻烦，请不要使用特殊符号.
+# VMESS_WSPATH / VLESS_WSPATH two constants define the camouflage path of Vmess/VLess respectively.
+# Please modify vmess or vless in the content respectively. Note: The disguised path starts with the / symbol. To avoid unnecessary trouble, please do not use special symbols.
 ENV VMESS_WSPATH /vmess
 ENV VLESS_WSPATH /vless
 </code></pre>
 
-<p>2、客户端配置</p>
-<p>节点客户端配置需要手动进行，下面以 V2rayN 为例。
-<p>下图为 VMess 配置示意图，请修改标示内容，其他设置与图片中显示一致。</p>
+<p>2. Client configuration</p>
+<p>Node client configuration needs to be done manually. The following takes V2rayN as an example.
+<p>The picture below is a schematic diagram of the VMess configuration. Please modify the label content. The other settings are consistent with those shown in the picture. </p>
 <img src="https://www.hicairo.com/zb_users/upload/2022/12/202212291672276258394161.webp">
-<p>下图为 VLess 配置示意图，请修改标示内容，其他设置与图片中显示一致。</p>
+<p>The picture below is a schematic diagram of VLess configuration. Please modify the label content. The other settings are consistent with those shown in the picture. </p>
 <img src="https://www.hicairo.com/zb_users/upload/2022/12/202212291672276274474231.webp">
 
-# 反馈与交流：
-<p>在使用过程中，如果遇到问题，请使用Telegram与我联系。（ https://t.me/HiaiFeng ）</p>
-<p>大家好，Doprax 非常关注用户使用体验。Hemen 先生及他的团队，为 Doprax 社区创建了 Discord 服务，如果您在使用过程中，遇到 Doprax 平台的相关问题或对平台有一些建议，请使用如下链接与官方联系。
+# Feedback and communication:
+
+<p>If you encounter any problems during use, please use Telegram to contact me. (https://t.me/HiaiFeng)</p>
+<p>Hi everyone, Doprax pays great attention to user experience. Mr. Hemen and his team have created a Discord service for the Doprax community. If you encounter problems related to the Doprax platform or have some suggestions for the platform during use, please use the following link to contact the official.
 
 Hello everyone! Doprax pays great attention to user experience. Mr. Hemen and his team have created a Discord service for the Doprax community. If you encounter any problems or have any suggestions related to the Doprax platform during use, please contact the official using the link below.
 

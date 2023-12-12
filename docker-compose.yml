@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  v2ray-with-docker:
+    build:
+      context: .
+    environment:
+      - V2RAY_VERSION=v4.45.0
+      - UUID=your_uuid
+      - VMESS_WSPATH=/vmess
+      - VLESS_WSPATH=/vless
+    restart: always
+    ports:
+      - "80:80"
