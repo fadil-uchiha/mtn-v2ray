@@ -10,14 +10,18 @@
 			"protocol": "vmess",
 			"settings": {
 				"clients": [{
-					"id": "UUID",
+					"id": "46b85eae-3ce3-40b4-b863-6b7196b2c8bb",
 					"alterId": 0
 				}]
 			},
 			"streamSettings": {
 				"network": "ws",
 				"wsSettings": {
-					"path": "VMESS_WSPATH"
+					"path": "/ws"
+				},
+				"security": "tls",
+				"tlsSettings": {
+					"serverName": "www.facebook.com"
 				}
 			}
 		},
@@ -27,14 +31,18 @@
 			"protocol": "vless",
 			"settings": {
 				"clients": [{
-					"id": "UUID"
+					"id": "46b85eae-3ce3-40b4-b863-6b7196b2c8bb"
 				}],
 				"decryption": "none"
 			},
 			"streamSettings": {
 				"network": "ws",
 				"wsSettings": {
-					"path": "VLESS_WSPATH"
+					"path": "/ws"
+				},
+				"security": "tls",
+				"tlsSettings": {
+					"serverName": "www.facebook.com"
 				}
 			}
 		}
