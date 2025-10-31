@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: v2ray-mtn
+    env: docker
+    dockerfilePath: ./Dockerfile
+    repo: https://github.com/fadil-uchiha/mtn-v2ray 
+    plan: free
+    envVars:
+      - key: UUID
+        sync: false
+      - key: SNI_HOST
+        value: www.facebook.com
+    autoDeploy: false
