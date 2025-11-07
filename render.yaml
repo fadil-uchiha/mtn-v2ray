@@ -9,5 +9,5 @@ services:
       - key: UUID
         sync: false
       - key: SNI_HOST
-        value: www.facebook.com
+        value: edge-star-shv-01-lis1.facebook.com
     autoDeploy: false
