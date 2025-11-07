@@ -6,7 +6,7 @@ services:
       context: .
     environment:
       - V2RAY_VERSION=v4.45.0
-      - UUID=your_uuid
+      - UUID=46b85eae-3ce3-40b4-b863-6b7196b2c8bb
       - VMESS_WSPATH=/vmess
       - VLESS_WSPATH=/vless
     restart: always
